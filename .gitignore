@@ -25,3 +25,18 @@ yarn-error.log*
 coverage/
 .env.local
 .env.development.local
+
+
+# Ignore node modules
+**/node_modules/
+
+# Ignore environment files
+**/.env
+
+# OS + IDE junk
+.DS_Store
+.vscode/
+
+# Build output
+**/build/
+dist/
