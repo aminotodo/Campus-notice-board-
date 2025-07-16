@@ -6,7 +6,8 @@ function NoticeForm({onSubmit}){
   const [description,setDescription]=useState('');
   const handleSubmit=async(e) =>{
     e.preventDefault();
-    console.log("submitting:",noticeData);
+    console.log("submitting:",{title, description
+    });
     
     try{
       const res=await axios.post(`${process.env.REACT_APP_API_URL}/api/notices`,
@@ -17,7 +18,7 @@ function NoticeForm({onSubmit}){
     setTitle('');
     setDescription('');
   } catch(err){
-    console.log("errro submitting the notice:",error);
+    console.log("errro submitting the notice:",err);
     alert("something went wrong");
   }
 };
