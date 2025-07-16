@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchNotices = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/notices');
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/notices`);
         setNotices(res.data);
       } catch (err) {
         console.error('Error fetching notices:', err);
@@ -25,7 +25,7 @@ function App() {
   const addNotice = async (newNotice) => {
     try {
       console.log('sending notice:',newNotice);
-      const res = await axios.post('http://localhost:5000/api/notices/add', newNotice);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/notices`, newNotice);
       setNotices((prev) => [res.data, ...prev]); // update UI immediately
     } catch (err) {
       console.error('Error adding notice:', err);
@@ -37,7 +37,7 @@ function App() {
     console.log('Deleting notice with ID:', id);
 
     try {
-      await axios.delete(`http://localhost:5000/api/notices/delete/${id}`,id);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/notices/${id}`);
       setNotices((prev) => prev.filter(notice => notice._id !== id));
     } catch (err) {
       console.error('Error deleting notice:', err);

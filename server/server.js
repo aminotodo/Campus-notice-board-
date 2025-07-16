@@ -7,17 +7,20 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ✅ Middleware
+const cors = require("cors");
 app.use(cors({
-  origin: ["http://localhost:3000","http://localhost:3001"], // allow frontend origin
-  methods: ["GET", "POST", "DELETE", "PUT"],
-  credentials: true,
+  origin: "https://campus-client-6qsakjl0w-anjanis-projects-45b4acb4.vercel.app"
 }));
+
 app.use(express.json()); // Parse incoming JSON
 
 // ✅ MongoDB connection
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected successfully"))
-  .catch((err) => console.error("MongoDB connection failed", err));
+
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => console.log("MongoDB connected"))
+  .catch(err => console.error("MongoDB error:", err));
 
 // ✅ Routes
 app.use("/api/notices", require("./routes/notices"));
