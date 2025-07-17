@@ -18,7 +18,7 @@ const noticeSchema=new mongoose.Schema({
 const Notice=mongoose.model('Notice',noticeSchema);
 
 //POST route to add notice
-router.post('/add', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     console.log("✅ Incoming req.body:", req.body);
 
@@ -54,7 +54,7 @@ router.get('/',async(req,res)=>{
   }
 });
 
-router.delete('/delete/:id', async (req, res) => {
+router.delete('/', async (req, res) => {
   const { id } = req.params;
   console.log("Attempting to delete:", id);
 
