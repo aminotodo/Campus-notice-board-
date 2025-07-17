@@ -5,11 +5,9 @@ require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
 // ✅ Middleware
-const cors = require("cors");
 app.use(cors({
   origin: "https://campus-client-6qsakjl0w-anjanis-projects-45b4acb4.vercel.app"
 }));
