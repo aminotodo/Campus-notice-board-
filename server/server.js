@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 // ✅ Middleware
 app.use(cors({
-  origin: "https://campus-client-6qsakjl0w-anjanis-projects-45b4acb4.vercel.app"
+  origin: "https://campus-client-nine.vercel.app"
 }));
 
 app.use(express.json()); // Parse incoming JSON
