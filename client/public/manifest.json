@@ -10,12 +10,12 @@
     {
       "src": "vscodelogo.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
+      "sizes": "32X32"
+    }
     {
       "src": "vslogo.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "32X32"
     }
   ],
   "start_url": ".",
