@@ -3,7 +3,7 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "vs.ico",
+      "src": "vs.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
@@ -11,7 +11,7 @@
       "src": "vscodelogo.png",
       "type": "image/png",
       "sizes": "32X32"
-    }
+    },
     {
       "src": "vslogo.png",
       "type": "image/png",
