@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+
 function Navbar(){
   return(
     <nav style={{padding:'10px', backgroundColor:'#1abc9c'}}>
+      <img src="/logo.png" alt="Logo" width={50} height={50} />
     <p style={{color:''}}>Go-to</p>
       <Link to="/" style={{marginRight:'20px', color:''}}>Home</Link>
       < Link to="/add">Add Notice</Link>

@@ -9,7 +9,8 @@ const PORT = process.env.PORT || 5000;
 
 // ✅ Middleware
 app.use(cors({
-  origin: "https://campus-client-nine.vercel.app"
+  origin: "https://campus-client-nine.vercel.app",
+  methods:["GET","POST","DELETE"]
 }));
 
 app.use(express.json()); // Parse incoming JSON
